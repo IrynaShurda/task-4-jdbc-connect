@@ -1,0 +1,10 @@
+2023-06-15 13:42:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "PRICE" not found [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at DatabaseQueryService.findProjectPrices(DatabaseQueryService.java:168)
+	at DatabaseQueryService.main(DatabaseQueryService.java:30)

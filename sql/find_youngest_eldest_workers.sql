@@ -1,0 +1,9 @@
+SELECT 'YOUNGEST' as TYPE, NAME, BIRTHDAY
+FROM worker
+WHERE DATEDIFF(DAY, BIRTHDAY, current_date) = (SELECT MIN(DATEDIFF(DAY, BIRTHDAY, current_date)) from worker)
+
+UNION ALL
+
+SELECT 'ELDEST' as TYPE, NAME, BIRTHDAY
+FROM worker
+WHERE DATEDIFF(DAY, BIRTHDAY, current_date) = (SELECT MAX(DATEDIFF(DAY, BIRTHDAY, current_date)) from worker);
